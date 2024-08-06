@@ -1,0 +1,28 @@
+{
+  "name": "revenda",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "author": "Cleberson Saller",
+  "license": "MIT",
+  "scripts": {
+    "dev": "npx ts-node-dev --respawn src/index.ts",
+    "db:update": "prisma db push && prisma generate",
+    "db:seed": "npx ts-node-dev src/database/seed.js"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.12.12",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.14.0",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "prisma": "^5.14.0"
+  },
+  "prisma": {
+    "schema": "src/database/schema.prisma"
+  }
+}
